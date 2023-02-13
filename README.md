@@ -18,9 +18,13 @@ O projeto foi feito com as seguintes tecnologias:
 
 ## Executando o Projeto
 #### Clonando o projeto
+
+#### baixe o .zip do projeto e abra a pasta no VSCode
+
+#### Renomeie o arquivo .env.example para .env para utilizar as variáveis de ambiente
+
+#### Abra um terminal e execute os seguintes comandos:
 ```sh
-$ baixe o .zip do projeto e abra a pasta no VSCode
-```
 $ cd Especialidades - PC1
 ```
 #### Iniciando a API
@@ -30,14 +34,14 @@ $ cd api
 # Criando a imagem Docker do banco de dados:
 # Dentro do projeto, já existe uma arquivo docker-compose.yml que possui o
 # PostgreSQL como banco de dados, basta ter o Docker instalado em sua máquina.
-$ docker-compose up -d # Iniciará em background e não irá bloquear o shell
 
+```sh
+$ docker-compose up -d # Iniciará em background e não irá bloquear o shell
+```
 # Rodando as migrations para o banco de dados e iniciando o projeto
+```sh
 $ yarn && yarn typeorm migration:run && yarn dev:server
 ```
-
-
-
 #### Iniciando o Frontend
 ```sh
 $ cd web
